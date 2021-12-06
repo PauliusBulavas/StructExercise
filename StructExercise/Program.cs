@@ -34,8 +34,14 @@ namespace StructExercise
         }
         static void Main(string[] args)
         {
-            Grades grades = new Grades();
-            grades.GradeInput();
+            Console.WriteLine("input the three grades of the trimester:");
+            int first = Convert.ToInt32(Console.ReadLine());
+            int second = Convert.ToInt32(Console.ReadLine());
+            int third = Convert.ToInt32(Console.ReadLine());
+
+            Grades grades = new Grades(first, second, third);
+
+            //grades.GradeInput();
             grades.GradeAvrage();
         }
 
