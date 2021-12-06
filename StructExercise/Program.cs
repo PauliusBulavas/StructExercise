@@ -23,12 +23,21 @@ namespace StructExercise
                 Console.WriteLine($"The avrage grade of {FirstGrade},{SecondGrade},{ThirdGrade} is {avrage}");
             }
 
+            public void GradeInput()
+            {
+                Console.WriteLine("input the three grades of the trimester:");
+                int firstGrade = Convert.ToInt32(Console.ReadLine());
+                int secondGrade = Convert.ToInt32(Console.ReadLine());
+                int thirdGrade = Convert.ToInt32(Console.ReadLine());
+            }
+
         }
         static void Main(string[] args)
         {
-            Grades grades = new Grades(5, 3, 7);
-
+            Grades grades = new Grades();
+            grades.GradeInput();
             grades.GradeAvrage();
         }
+
     }
 }
